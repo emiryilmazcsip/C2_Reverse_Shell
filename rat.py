@@ -6,7 +6,7 @@ import sys
 import socket
 import subprocess
 
-SERVER_IP = "10.117.6.130"
+SERVER_IP = "129.21.131.70"
 PORT = 4444
 
 
