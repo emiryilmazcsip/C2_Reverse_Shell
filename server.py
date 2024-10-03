@@ -1,3 +1,10 @@
+'''
+
+Server python module.
+
+'''
+
+
 import sys
 import socket
 
